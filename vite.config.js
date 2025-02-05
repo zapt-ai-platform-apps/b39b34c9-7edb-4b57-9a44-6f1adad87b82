@@ -7,8 +7,7 @@ export default defineConfig({
     react(),
     sentryVitePlugin({
       org: "zapt-apps",
-      project: process.env.VITE_PUBLIC_APP_ID,
-      authToken: process.env.SENTRY_AUTH_TOKEN,
+      project: process.env.VITE_PUBLIC_APP_ID
     })
   ],
   build: {
@@ -17,7 +16,7 @@ export default defineConfig({
     sourcemap: true
   },
   resolve: {
-    conditions: ['development', 'browser'],
+    conditions: ['development', 'browser']
   },
   optimizeDeps: {
     exclude: ['drizzle-orm']
